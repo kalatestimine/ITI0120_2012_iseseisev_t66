@@ -138,7 +138,9 @@ $ob_html->add_2_ar_body("</div>\n");
 $s_block_start='<div style="position:relative;left:200px;top:80px;">';
 $ob_html->add_2_ar_body($s_block_start."\n");
 $ob_html->add_2_ar_body('<br/><p>');
-$ob_html->add_2_ar_body('<a href="https://github.com/kalatestimine/ITI0120_2012_iseseisev_t66">Koodihoidla</a><br/>');
+$ob_html->add_2_ar_body('<a href="https://github.com/kalatestimine/ITI0120_2012_iseseisev_t66">Koodihoidla</a>'.
+			' ja <a href="https://github.com/kalatestimine/ITI0120_2012_iseseisev_t66/wiki">Wiki</a>'.
+			'<br/>');
 $ob_html->add_2_ar_body('<a href="https://sandbox.asaquality.ee/moodle/login/index.php">Kursuse kodulehekülg</a><br/>');
 $ob_html->add_2_ar_body('<a href="http://urls.softf1.com/2012_ttu/tarkvaratestimine/g/projekt_1/doc/">Viidatav demo</a><br/>');
 $ob_html->add_2_ar_body('</p><br/>');
