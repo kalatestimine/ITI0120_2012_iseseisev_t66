@@ -1,0 +1,15 @@
+===========================================================================
+====================  ITI0120_2012_iseseisev_t66  =========================
+===========================================================================
+
+This project is part of a home assignment. Official language of the 
+project is Estonian. 
+
+As of November 2012 the official web site of the course is:
+
+        https://sandbox.asaquality.ee/moodle/login/index.php
+
+martin.vahi@softf1.com is in a role of a student and the the home 
+assignment is meant to be solved by a group of students.
+
+===========================================================================
