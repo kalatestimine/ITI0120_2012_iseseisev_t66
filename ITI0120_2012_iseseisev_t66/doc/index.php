@@ -81,6 +81,7 @@ function s2link($s_in) {
 function s_ls($s_prefix,$i_recursion_limit,&$arht_list,&$arht_skiplist) {
 	$i_recursion_limit=$i_recursion_limit-1;
 	$arht=sirelFS::ls(realpath($s_prefix));
+	sort($arht,SORT_REGULAR);
 	$i_len=count($arht);
 	$s_fn=NULL;
 	$s_token=$s_prefix;
@@ -124,6 +125,7 @@ $arht_skiplist['.svn']=42;
 $arht_skiplist['IDE']=42;
 $arht_skiplist['SVN_hoidlad']=42;
 $arht_skiplist['SVN_hoidlaid']=42;
+$arht_skiplist['2012_11_28']=42;
 $arht_list=array();
 s_ls($s_prefix,5,$arht_list,$arht_skiplist);
 $s_1=s_concat_array_of_strings($arht_list);

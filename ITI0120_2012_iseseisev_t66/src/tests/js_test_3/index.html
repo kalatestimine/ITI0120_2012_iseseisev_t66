@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="generator" content=
+			  "HTML Tidy for HTML5 (experimental) for Linux/x86 https://github.com/w3c/tidy-html5/tree/8025154" />
+
+		<title>js_test_3</title>
+		<style type="text/css">
+			/*<![CDATA[*/
+
+			body {
+				margin:0;
+				padding:0;
+			}
+			/*]]>*/
+		</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			/*<![CDATA[*/
+			div.c1 {text-align:center;}
+			/*]]>*/
+		</style>
+		<script type="text/javascript" src="./../lib/google/swobject/paigaldatult/v_2_2/swfobject.js">
+		</script>
+		<script type="text/javascript">
+			var ob_msgboard=null;
+			var ob_player=null;
+
+			window.print=function(s_msg){
+				ob_msgboard.innerHTML=s_msg;
+			} // print
+			var print=window.print;
+
+			window.println=function(s_msg){
+				var msg=ob_msgboard.innerHTML+"<br/>\n"+s_msg;	
+				ob_msgboard.innerHTML=msg;
+			} // println
+			var println=window.println;
+
+			function lc_set_bg_color(s_color){
+				var ob_elem=document.querySelector('body');
+				ob_elem.setAttribute("style","background-color: "+s_color+';');
+			} // lc_set_bg_color
+
+			var i_countdown=8;
+			var b_hidden=false;
+			function lc_tick(){
+				if (i_countdown<0){
+					return;
+				} // if
+				//var s_msg='<p style="font-size:50pt;">'+i_countdown+'</p>';
+				var s_msg='<p style="position:fixed;left:50%;top:20%;z-index:1;'+
+					'font-size:100pt;font-style:oblique;color:#000000;">'+
+					i_countdown+'</p>';
+				print(s_msg);
+				if (i_countdown==0){
+					print("");
+					s_msg='<p style="position:fixed;left:40%;top:30%;z-index:1;'+
+						'font-size:60pt;color:#FFFFFF;">Läks!!!</p>';
+					print(s_msg);
+					lc_set_bg_color('#000000');
+					ob_player.playVideo();
+					s_msg='ob_player.setAttribute("style","visibility:visible;");';
+					setInterval('print("");'+s_msg, 1000);
+				} else {
+					if(!b_hidden){
+						ob_player.setAttribute("style","visibility:hidden;");
+					} // if
+					setInterval('lc_tick();', 1000);
+				}
+				i_countdown--;
+			} lc_tick
+
+            // This is a tricky one: the function must have exactly
+			// the name as written in the API, i.e. it doesn't require
+			// registration, but it assumes a certain name.
+			function onYouTubePlayerReady(playerId) {
+				ob_player= document.getElementById("myytplayer");
+				println('Mänguvalmis.');
+				setInterval('lc_tick();', 2000);
+			} // onYouTubePlayerReady
+  
+			window.onload = function() {
+				ob_msgboard=document.querySelector('#html_id_msgboard')
+				println('Mängija isendiloome algus ...');
+				var params = { allowScriptAccess: "always" };
+				var atts = { id: "myytplayer" };
+				var s_video_id='-_4RWakf3J0';
+				swfobject.embedSWF("http://www.youtube.com/v/"+s_video_id+
+					"?enablejsapi=1&playerapiid=ytplayer&version=3",
+				"ytapiplayer", "525", "456", "8", null, null, params, atts);
+				//ob_player.addEventListener("onStateChange", "evh_ob_player_is_ready");
+				println('Mängija isendiloome lõpp ...');
+			} // window.onload
+
+			window.onbeforeunload=function(){}
+
+		</script>
+	</head>
+
+	<body id="the_document_body" class="yui-skin-sam">
+		<div class="c1">
+			<h1>js_test_3</h1><br />
+			<br />
+			<p id="html_id_msgboard"></p>
+			<br/>
+			<div id="ytapiplayer">
+				One needs the Flash player 8+ and JavaScript enabled to view this video.
+			</div>
+			<br />
+		</div>
+	</body>
+</html>

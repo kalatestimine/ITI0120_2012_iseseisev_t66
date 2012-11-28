@@ -1,0 +1,51 @@
+===========================================================================
+====================  ITI0120_2012_iseseisev_t66  =========================
+===========================================================================
+
+Antud projekti korral on tegu õppeaines 
+"Tarkvara testimise alused" (õppejõuks Maili Markvardt) 
+antud grupitööpõhise kodutöö ühe osaga. 
+
+November 2012 seisuga on kursuse ametlik kodulehekülg:
+
+        https://sandbox.asaquality.ee/moodle/login/index.php
+
+Siin projekti koodi elus-versiooni asub aadressil:
+
+        http://urls.softf1.com/2012_ttu/tarkvaratestimine/g/projekt_1/doc/
+
+Lisaküsimustele on nõus vastama martin.vahi@softf1.com, +372-5-515-537.
+
+Kataloogides ./src/tests/js_test_* sisalduv kood on MIT'litsensi all.
+
+---------------------------------------------------------------------------
+                       Kohaldatud MIT litsens:
+---------------------------------------------------------------------------
+
+ Author: martin.vahi@softf1.com that has an
+ Estonian personal identification code of 38108050020.
+
+ The code in folders ./src/tests/js_test_* is under the MIT license.
+
+ Permission is hereby granted, free of charge, to any person 
+ obtaining a copy of this software and associated documentation 
+ files (the "Software"), to deal in the Software without restriction, 
+ including without limitation the rights to use, copy, modify, merge, 
+ publish, distribute, sublicense, and/or sell copies of the Software, 
+ and to permit persons to whom the Software is furnished to do so, 
+ subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be 
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+===========================================================================
+

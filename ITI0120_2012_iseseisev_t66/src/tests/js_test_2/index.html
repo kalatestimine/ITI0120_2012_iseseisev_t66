@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 (experimental) for Linux/x86 https://github.com/w3c/tidy-html5/tree/8025154" />
+	<head>
+		<meta name="generator" content=
+			  "HTML Tidy for HTML5 (experimental) for Linux/x86 https://github.com/w3c/tidy-html5/tree/8025154" />
 
-  <title>js_test_2</title>
-  <style type="text/css">
-		      /*<![CDATA[*/
+		<title>js_test_2</title>
+		<style type="text/css">
+			/*<![CDATA[*/
 
 			body {
 				margin:0;
 				padding:0;
 			}
 			/*]]>*/
-  </style>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <style type="text/css">
-		      /*<![CDATA[*/
+		</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			/*<![CDATA[*/
 			div.c1 {text-align:center;}
 			/*]]>*/
-  </style>
-</head>
+		</style>
+		<script type="text/javascript">
+			var ob_msgboard=null;
+			var ob_player=null;
 
-<body id="the_document_body" class="yui-skin-sam">
-  <div class="c1">
-    <h1>js_test_2</h1><br />
-    <br />
-    <iframe id="ytplayer" type="text/html" width="640" height="360" src=
-    "https://www.youtube.com/embed/Zhawgd0REhA" frameborder="0"
-    allowfullscreen="" name="ytplayer"></iframe>
-  </div>
-</body>
+			window.println=function(s_msg){
+				var msg=ob_msgboard.innerHTML+"<br/>\n"+s_msg;	
+				ob_msgboard.innerHTML=msg;
+			} // println
+			var println=window.println;
+
+			window.evh_ob_player_is_ready=function(newState){
+				println('Mänguvalmis.');
+				ob_player.playVideo();
+			} // evh_ob_player_is_ready 
+  
+			window.onload = function() {
+				ob_player=document.querySelector('#html_id_ytplayer');
+				ob_msgboard=document.querySelector('#html_id_msgboard')
+				ob_player.addEventListener("onStateChange", "evh_ob_player_is_ready");
+				println('See test põrus.');
+			} // window.onload
+
+			window.onbeforeunload=function(){}
+
+		</script>
+	</head>
+
+	<body id="the_document_body" class="yui-skin-sam">
+		<div class="c1">
+			<h1>js_test_2</h1><br />
+			<br />
+			<p id="html_id_msgboard"></p>
+			<br/>
+			<iframe id="html_id_ytplayer" type="text/html" width="640" height="360" src=
+					"https://www.youtube.com/embed/-_4RWakf3J0?version=3&enablejsapi=1" frameborder="0"
+					allowfullscreen="" name="ytplayer"></iframe>
+		</div>
+	</body>
 </html>
