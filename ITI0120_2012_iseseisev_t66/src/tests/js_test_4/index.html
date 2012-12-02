@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 (experimental) for Linux/x86 https://github.com/w3c/tidy-html5/tree/8025154" />
+
+  <title>js_test_4</title>
+  <style type="text/css">
+	    /*<![CDATA[*/
+
+			body {
+				margin:0;
+				padding:0;
+			}
+			/*]]>*/
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+	    /*<![CDATA[*/
+			div.c1 {text-align:center;}
+			/*]]>*/
+  </style>
+  <script>
+      var widget;
+      var player;
+      function onYouTubeIframeAPIReady() {
+	widget = new YT.UploadWidget('widget', {
+	  width: 500,
+	  events: {
+	    'onUploadSuccess': onUploadSuccess,
+	    'onProcessingComplete': onProcessingComplete
+	  }
+	});
+      }
+      
+      function onUploadSuccess(event) {
+	alert('Video ID ' + event.data.videoId +
+	      ' was uploaded and is currently being processed.');
+      }
+      
+      function onProcessingComplete(event) {
+	player = new YT.Player('player', {
+	  height: 390,
+	  width: 640,
+	  videoId: event.data.videoId,
+	  events: {}
+	});
+      }
+
+      function load_upload_widget_and_Player_API(){
+	  // Asynchronously load the Upload Widget and Player API code.
+	  var tag = document.createElement('script');
+	  tag.src = "//www.youtube.com/iframe_api";
+	  var firstScriptTag = document.getElementsByTagName('script')[0];
+	  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      } // load_upload_widget_and_Player_API
+      load_upload_widget_and_Player_API()
+  </script>
+</head>
+
+<body id="the_document_body" class="yui-skin-sam">
+  <div class="c1">
+    <h1>js_test_4</h1><br />
+    <br />
+
+    <h3><a href=
+    "https://developers.google.com/youtube/youtube_upload_widget">Testitav</a></h3>
+
+    <p>Antud testi eesärk on teada saada, kas YouTube videode üles-laadimise
+    GUI-komponent (<i>widget</i>) koos oma dokumentatsiooniga on
+    kasutuskõlblik.</p>
+
+    <h3>Testi tulemus</h3>
+
+    <p><br />
+    See test põrus, s.t. isegi dokumentatsiooni järgides ei ole võimalik luua
+    toimivat koodi. JavaScript'i konsooli väljnud:<br />
+    <br />
+    <pre>
+Unable to post message to https://www.youtube.com. Recipient has origin http://192.168.0.101.
+	
+</pre><br />
+    <br />
+    API dokumentatsioonis oli hoiatatud, et tegu on eksperimentaalse
+    komponendiga, mistõttu dokumentatsiooni võib mingil määral talutavaks,
+    sobivaks lugeda, kuid fakt on, et tekib siiski küsimus, et milleks
+    publitseerida tarkvara vigasena, kui antud tarkvara ei ole vaja
+    teha tellimus-tööna, tähtajaks.
+
+    <br /><br /></p>
+    <h3>YouTube videode üles laadimise GUI-komponent</h3>
+    <br /><br />
+    <div id="widget"></div>
+
+    <div id="player"></div>
+    <br /><br /><br /><br />
+  </div>
+</body>
+</html>
