@@ -26,7 +26,7 @@
 			var ob_player=null;
 
 			window.println=function(s_msg){
-				var msg=ob_msgboard.innerHTML+"<br/>\n"+s_msg;	
+				var msg=ob_msgboard.innerHTML+"<br/>\n"+s_msg;
 				ob_msgboard.innerHTML=msg;
 			} // println
 			var println=window.println;
@@ -34,13 +34,17 @@
 			window.evh_ob_player_is_ready=function(newState){
 				println('Mänguvalmis.');
 				ob_player.playVideo();
-			} // evh_ob_player_is_ready 
+			} // evh_ob_player_is_ready
   
 			window.onload = function() {
 				ob_player=document.querySelector('#html_id_ytplayer');
 				ob_msgboard=document.querySelector('#html_id_msgboard')
 				ob_player.addEventListener("onStateChange", "evh_ob_player_is_ready");
-				println('See test põrus.');
+				println('<span style="color:#FF0505;">See test põrus</span>,<br/> '+
+					'sest dokumentatsiooni järgi jäi alguses mulje, '+
+					'et mängijale saab suvalise nimega<br/> enda defineeritud '+
+					'funktsioone sündmuste kuulariteks registreerida, '+
+					'<br/>kuid tegelikult kood nii ei toimi.');
 			} // window.onload
 
 			window.onbeforeunload=function(){}
