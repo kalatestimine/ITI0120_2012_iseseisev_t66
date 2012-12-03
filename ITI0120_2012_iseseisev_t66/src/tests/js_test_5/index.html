@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="generator" content=
+			  "HTML Tidy for HTML5 (experimental) for Linux/x86 https://github.com/w3c/tidy-html5/tree/8025154" />
+
+		<title>js_test_5</title>
+		<style type="text/css">
+			/*<![CDATA[*/
+
+			body {
+				margin:0;
+				padding:0;
+			}
+			/*]]>*/
+		</style>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css">
+			/*<![CDATA[*/
+			div.c1 {text-align:center;}
+			/*]]>*/
+		</style>
+		<script type="text/javascript" src="./../../lib/2012_11/google/swobject/paigaldatult/v_2_2/swfobject.js">
+		</script>
+		<script type="text/javascript">
+			var ob_msgboard=null;
+			var ob_player=null;
+
+			window.print=function(s_msg){
+				ob_msgboard.innerHTML=s_msg;
+			} // print
+			var print=window.print;
+
+			window.println=function(s_msg){
+				var msg=ob_msgboard.innerHTML+"<br/>\n"+s_msg;	
+				ob_msgboard.innerHTML=msg;
+			} // println
+			var println=window.println;
+
+			function lc_set_bg_color(s_color){
+				var ob_elem=document.querySelector('body');
+				ob_elem.setAttribute("style","background-color: "+s_color+';');
+			} // lc_set_bg_color
+
+
+            // This is a tricky one: the function must have exactly
+			// the name as written in the API, i.e. it doesn't require
+			// registration, but it assumes a certain name.
+			function onYouTubePlayerReady(playerId) {
+				ob_player= document.getElementById("myytplayer");
+				//println('Mänguvalmis.');
+				//setInterval('lc_tick();', 2000);
+				b_allowSeekAhead=true;
+				i_seconds=626;
+				ob_player.seekTo(i_seconds, b_allowSeekAhead);
+				ob_player.playVideo();
+			} // onYouTubePlayerReady
+  
+			window.onload = function() {
+				ob_msgboard=document.querySelector('#html_id_msgboard')
+				//println('Mängija isendiloome algus ...');
+				var params = { allowScriptAccess: "always" };
+				var atts = { id: "myytplayer" };
+				var s_video_id='CZkkYGW4-F4';
+				swfobject.embedSWF("http://www.youtube.com/v/"+s_video_id+
+					"?enablejsapi=1&playerapiid=ytplayer&version=3",
+				"ytapiplayer", "850", "600", "8", null, null, params, atts);
+				//println('Mängija isendiloome lõpp ...');
+			} // window.onload
+
+			window.onbeforeunload=function(){}
+
+		</script>
+	</head>
+
+	<body id="the_document_body" class="yui-skin-sam">
+		<div class="c1">
+			<h1>JavaScript test 5: video käivitamine etteantud ajahetkel</h1><br/>
+			<br />
+			<p id="html_id_msgboard">
+			Tegu on katkendiga mängust <i>Metal Gear Solid 3 Snake Eater Collection</i>.
+			<br/>
+		 Antud tseeni korral on märkimisväärne, et antud tiitel-klipp ei asu mängu alguses, vaid <br/>
+		 see asub mängu lugu jutustava vaheklipina ligikaudu 20 minutit pärast 
+			<a href="http://www.youtube.com/playlist?list=PL6E6F8EBF3CB15EB1">
+		 inimese poolse interaktsiooni 
+			</a> algust.
+			<br/>
+			<div id="ytapiplayer">
+				One needs the Flash player 8+ and JavaScript enabled to view this video.
+			</div>
+			<br />
+		</div>
+	</body>
+</html>
